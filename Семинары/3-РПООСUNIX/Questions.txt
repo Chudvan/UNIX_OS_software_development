@@ -1,0 +1,51 @@
+2
+	fread - 2, 3 аргументы?
+	fseek - 2, 3 аргументы? whence?
+	off_t - что за тип?
+	fseek vs fseeko
+	ftell vs ftello
+3
+	clearerr - хз
+	setbuf, setvbuf - хз
+	fprintf - аргумент format?
+	fgets - как пользоваться?
+	strtod, strtol - нечто своё самописное, не понял + последний параметр
+4
+	O_NONBLOCK, O_CLOEXEC, O_EXCL, O_TRUNC, O_CREAT
+	open - синенькие права доступа?
+	pread, pwrite
+5
+	truncate, ftruncate
+6
+	Флаг файла? Состояние файла?
+	fcntl, 2 аргумент - значения? FD_CLOEXEC?
+	Пример?
+	F_GETFL / F_SETFL ?
+7
+	Возвращает наименьший описатель не меньше указанного в 3 аргументе, связанный с заданным файлом | не меньше 3-го?? что значит наименьший?
+	return fcntl( fildes, F_DUPFD, 0 ); - за что отвечает 0? - просто чтобы задать минимальный?
+8	
+	O_CREAT - просто создание? а если существует?
+	O_TRUNC - усечение до 0 размера файла, но проверить
+9
+	- обязательная (mandatory) / рекомендуемая (advisory) +-? понял как установить с помощью SGID, но хотелось бы пример
+	F_GETLK - проверка, заблокирован ли?
+11
+	int fstatat(int fd, const char *path, struct stat *buf, int flag); //AT_SYMLINK_NOFOLLOW
+	Как установить понятно (stat). А как получить характеристики?
+13
+	S_ISVTX
+14
+	fstatvfs - зачем вызывать с именем файла?
+15
+	FILE *tmpfile(void);
+	char *tempnam(const char *dir, const char *pfx); Имя временного файла
+16
+	если int chdir(const char *path); - поменять папку, то как узнать какая папка текущая?
+	int fchdir(int fildes); - дескриптор папки использует?
+	int fchownat(int fd, const char *path, uid_t owner, gid_t group, int flag); - относительный путь какой-то?
+17
+	понять подробнее какая функция за что отвечает
+18
+	int readdir_r( DIR *dirp, struct dirent *entry, struct dirent **result );
+

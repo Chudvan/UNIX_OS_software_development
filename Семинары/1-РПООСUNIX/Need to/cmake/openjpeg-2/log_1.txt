@@ -1,0 +1,190 @@
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ cmake .
+-- The C compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Looking for string.h
+-- Looking for string.h - found
+-- Looking for memory.h
+-- Looking for memory.h - found
+-- Looking for stdlib.h
+-- Looking for stdlib.h - found
+-- Looking for stdio.h
+-- Looking for stdio.h - found
+-- Looking for math.h
+-- Looking for math.h - found
+-- Looking for float.h
+-- Looking for float.h - found
+-- Looking for time.h
+-- Looking for time.h - found
+-- Looking for stdarg.h
+-- Looking for stdarg.h - found
+-- Looking for ctype.h
+-- Looking for ctype.h - found
+-- Looking for assert.h
+-- Looking for assert.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for strings.h
+-- Looking for strings.h - found
+-- Looking for sys/stat.h
+-- Looking for sys/stat.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Checking for 64-bit off_t
+-- Checking for 64-bit off_t - present
+-- Checking for fseeko/ftello
+-- Checking for fseeko/ftello - present
+-- Large File support - found
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+-- Your system seems to have a Z lib available, we will use it to generate PNG lib
+-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") 
+-- Your system seems to have a PNG lib available, we will use it
+-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.1.0") 
+-- Your system seems to have a TIFF lib available, we will use it
+-- Could NOT find LCMS2 (missing: LCMS2_LIBRARY LCMS2_INCLUDE_DIR) 
+-- Could NOT find LCMS (missing: LCMS_LIBRARY LCMS_INCLUDE_DIR) 
+-- LCMS2 or LCMS lib not found, activate BUILD_THIRDPARTY if you want build it
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ivan/Загрузки/openjpeg-2.1.0
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ sudo apt install libdvd-pkg
+[sudo] пароль для ivan: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libfprint-2-tod1 libllvm9 python3-click python3-colorama
+Для их удаления используйте «sudo apt autoremove».
+Следующие НОВЫЕ пакеты будут установлены:
+  libdvd-pkg
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 1 пакетов не обновлено.
+Необходимо скачать 14,9 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 80,9 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/multiverse amd64 libdvd-pkg all 1.4.2-1-1 [14,9 kB]
+Получено 14,9 kB за 0с (154 kB/s)       
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета libdvd-pkg.
+(Чтение базы данных … на данный момент установлено 247117 файлов и каталогов.)
+Подготовка к распаковке …/libdvd-pkg_1.4.2-1-1_all.deb …
+Распаковывается libdvd-pkg (1.4.2-1-1) …
+Настраивается пакет libdvd-pkg (1.4.2-1-1) …
+libdvd-pkg: dpkg database is locked. You may need to use command "sudo dpkg-reco
+nfigure libdvd-pkg".
+libdvd-pkg: Building and installation of package(s) [libdvdcss2 libdvdcss-dev] p
+ostponed till after next APT operation.
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ sudo   │ 
+sudo: │: команда не найдена
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ sudo dpkg-reconfigure libdvd-pkg
+libdvd-pkg: Downloading orig source...
+I: libdvdcss_1.4.2
+/usr/bin/wget --tries=3 --timeout=40 --read-timeout=40 --continue -O libdvdcss_1.4.2.orig.tar.bz2 \
+          http://download.videolan.org/pub/libdvdcss/1.4.2/libdvdcss-1.4.2.tar.bz2 \
+        || /usr/bin/uscan --noconf --verbose --rename --destdir=/usr/src/libdvd-pkg --check-dirname-level=0 --force-download --download-current-version /usr/share/libdvd-pkg/debian
+--2020-11-09 06:35:16--  http://download.videolan.org/pub/libdvdcss/1.4.2/libdvdcss-1.4.2.tar.bz2
+Распознаётся download.videolan.org (download.videolan.org)… 213.36.253.2, 2a01:e0d:1:3:58bf:fa02:c0de:5
+Подключение к download.videolan.org (download.videolan.org)|213.36.253.2|:80... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 366824 (358K) [application/octet-stream]
+Сохранение в: «libdvdcss_1.4.2.orig.tar.bz2»
+
+libdvdcss_1.4.2.ori 100%[===================>] 358,23K   523KB/s    за 0,7s    
+
+2020-11-09 06:35:17 (523 KB/s) - «libdvdcss_1.4.2.orig.tar.bz2» сохранён [366824/366824]
+
+libdvd-pkg: Checking orig.tar integrity...
+/usr/src/libdvd-pkg/libdvdcss_1.4.2.orig.tar.bz2: ЦЕЛ
+libdvd-pkg: Unpacking and configuring...
+libdvd-pkg: Building the package... (it may take a while)
+libdvd-pkg: Build log will be saved to /usr/src/libdvd-pkg/libdvdcss2_1.4.2-1~local_amd64.build
+Current: =ep
+Bounding set =cap_chown,cap_dac_override,cap_fowner,cap_wake_alarm,cap_block_suspend,cap_audit_read
+Ambient set =
+Securebits: 024/0x14/5'b10100
+ secure-noroot: no (unlocked)
+ secure-no-suid-fixup: yes (unlocked)
+ secure-keep-caps: yes (unlocked)
+ secure-no-ambient-raise: no (unlocked)
+uid=0(root) euid=0(root)
+gid=0(root)
+groups=0(root)
+Guessed mode: UNCERTAIN (0)
+
+
+
+
+
+
+
+
+
+
+
+libdvd-pkg: Installing...
+Выбор ранее не выбранного пакета libdvdcss-dev:amd64.
+(Чтение базы данных … на данный момент установлено 247148 файлов и каталогов.)
+Подготовка к распаковке …/libdvdcss-dev_1.4.2-1~local_amd64.deb …
+Распаковывается libdvdcss-dev:amd64 (1.4.2-1~local) …
+Выбор ранее не выбранного пакета libdvdcss2:amd64.
+Подготовка к распаковке …/libdvdcss2_1.4.2-1~local_amd64.deb …
+Распаковывается libdvdcss2:amd64 (1.4.2-1~local) …
+Настраивается пакет libdvdcss2:amd64 (1.4.2-1~local) …
+Настраивается пакет libdvdcss-dev:amd64 (1.4.2-1~local) …
+Обрабатываются триггеры для libc-bin (2.31-0ubuntu9.1) …
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ sudo dpkg-reconfigure libdvd-pkg
+libdvd-pkg: guest package [libdvdcss2/1.4.2-1~local] is already installed.
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ cmake .
+CMake Warning (dev) at cmake/TestLargeFiles.cmake:20 (if):
+  Policy CMP0054 is not set: Only interpret if() arguments as variables or
+  keywords when unquoted.  Run "cmake --help-policy CMP0054" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  Quoted variables like "OPJ_HAVE_LARGEFILES" will no longer be dereferenced
+  when the policy is set to NEW.  Since the policy is not set the OLD
+  behavior will be used.
+Call Stack (most recent call first):
+  CMakeLists.txt:218 (OPJ_TEST_LARGE_FILES)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Your system seems to have a Z lib available, we will use it to generate PNG lib
+-- Your system seems to have a PNG lib available, we will use it
+-- Your system seems to have a TIFF lib available, we will use it
+-- Could NOT find LCMS2 (missing: LCMS2_LIBRARY LCMS2_INCLUDE_DIR) 
+-- Could NOT find LCMS (missing: LCMS_LIBRARY LCMS_INCLUDE_DIR) 
+-- LCMS2 or LCMS lib not found, activate BUILD_THIRDPARTY if you want build it
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ivan/Загрузки/openjpeg-2.1.0
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ echo $LCMS2_LIBRARY
+
+ivan@Ivan-PC:~/Загрузки/openjpeg-2.1.0$ 
+

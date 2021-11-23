@@ -1,0 +1,300 @@
+$ gcc hello.c
+$ ./a.out
+Hello World! 
+$ gcc hello.c hello_2.c 
+/usr/bin/ld: /tmp/cczsRZub.o: в функции «main»:
+hello_2.c:(.text+0x0): повторное определение «main»; /tmp/ccp9HRPb.o:hello.c:(.text+0x0): здесь первое определение
+collect2: error: ld returned 1 exit status
+$ gcc hello.c foo.c 
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo’ [-Wimplicit-function-declaration]
+    3 |  foo();
+      |  ^~~
+foo.c: In function ‘foo’:
+foo.c:2:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    2 |  printf("foo is here!\n");
+      |  ^~~~~~
+foo.c:2:2: warning: incompatible implicit declaration of built-in function ‘printf’
+foo.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int foo(void){
+$ gcc hello.c foo.c 
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo’ [-Wimplicit-function-declaration]
+    3 |  foo();
+      |  ^~~
+$ gcc foo.c hello.c -o hello
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo’ [-Wimplicit-function-declaration]
+    3 |  foo();
+      |  ^~~
+$ ./hello 
+foo is here!
+Hello World! 
+$ gcc hello.c
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo’ [-Wimplicit-function-declaration]
+    3 |  foo();
+      |  ^~~
+/usr/bin/ld: /tmp/cceiqlV3.o: в функции «main»:
+hello.c:(.text+0xe): неопределённая ссылка на «foo»
+collect2: error: ld returned 1 exit status
+$ gcc hello.c foo.c 
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo’ [-Wimplicit-function-declaration]
+    3 |  foo();
+      |  ^~~
+foo.c: In function ‘foo’:
+foo.c:4:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    4 |  printf("foo is here!\n");
+      |  ^~~~~~
+foo.c:4:2: warning: incompatible implicit declaration of built-in function ‘printf’
+foo.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | //#include <stdio.h>
+$ ./a.out 
+foo is here!
+Hello World! 
+$ gcc -w foo.c hello.c 
+$ ./a.out 
+foo is here!
+Hello World! 
+$ gcc -w foo.c hello.c -o hello
+$ ./hello 
+foo is here!
+Hello World! 
+$ gcc -w foo.c -o hello
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: в функции «_start»:
+(.text+0x24): неопределённая ссылка на «main»
+collect2: error: ld returned 1 exit status
+$ gcc -w hello.c foo.c -o hello
+$ ./hello 
+foo is here!
+Hello World! 
+$ touch bin
+$ ls -l
+итого 52
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:32 a.out
+-rw-rw-r-- 1 ivan ivan   210 окт 23 14:35 bin
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:34 hello
+-rw-rw-r-- 1 ivan ivan    84 окт 23 14:27 hello.c
+$ gcc -w hello.c foo.c bin -o hello
+/usr/bin/ld:bin: file format not recognized; treating as linker script
+/usr/bin/ld:bin:1: syntax error
+collect2: error: ld returned 1 exit status
+$ gcc -w hello.c foo.c bin.c -o hello
+bin.c: In function ‘foo_2’:
+bin.c:2:9: error: missing terminating " character
+    2 |  printf("
+      |         ^
+bin.c:3:3: error: ‘MANY’ undeclared (first use in this function)
+    3 |   MANY WORDS
+      |   ^~~~
+bin.c:3:3: note: each undeclared identifier is reported only once for each function it appears in
+bin.c:3:7: error: expected ‘)’ before ‘WORDS’
+    3 |   MANY WORDS
+      |       ^~~~~~
+      |       )
+bin.c:21:13: error: missing terminating " character
+   21 |   MANY WORDS")
+      |             ^~
+bin.c:21:13: error: expected ‘;’ before ‘}’ token
+   21 |   MANY WORDS")
+      |             ^
+      |             ;
+   22 | }
+      | ~            
+$ ls -l
+итого 32
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:32 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:37 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rw-rw-r-- 1 ivan ivan    84 окт 23 14:27 hello.c
+$ gcc -w hello.c foo.c bin.c -o hello
+$ ls -l
+итого 52
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:32 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:37 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:38 hello
+-rw-rw-r-- 1 ivan ivan    84 окт 23 14:27 hello.c
+$ gcc -w hello.c foo.c -o hello
+$ ls -l
+итого 52
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:32 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:37 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16752 окт 23 14:38 hello
+-rw-rw-r-- 1 ivan ivan    84 окт 23 14:27 hello.c
+$ gcc -w hello.c foo.c bin.c -o hello
+/usr/bin/ld: /tmp/cc69PMIM.o: в функции «foo»:
+bin.c:(.text+0x0): повторное определение «foo»; /tmp/ccu5fI3J.o:foo.c:(.text+0x0): здесь первое определение
+collect2: error: ld returned 1 exit status
+$ gcc -w hello.c foo.c bin.c -o hello
+$ ./hello 
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ gcc -w hello.c foo.c bin.c
+$ ./a.out 
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ ls -l
+итого 52
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:40 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:42 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+$ gcc -w hello.c foo.c bin.c -o hello -lrt
+$ ls -l
+итого 52
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:40 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+$ gcc -c hello.c
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo_2’ [-Wimplicit-function-declaration]
+    3 |  foo_2();
+      |  ^~~~~
+$ ls -l
+итого 56
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:40 a.out
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ gcc hello.o
+/usr/bin/ld: hello.o: в функции «main»:
+hello.c:(.text+0xe): неопределённая ссылка на «foo_2»
+collect2: error: ld returned 1 exit status
+$ gcc hello.o -o hel
+/usr/bin/ld: hello.o: в функции «main»:
+hello.c:(.text+0xe): неопределённая ссылка на «foo_2»
+collect2: error: ld returned 1 exit status
+$ ls -l
+итого 36
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ gcc -c bin.c
+bin.c: In function ‘foo_2’:
+bin.c:2:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    2 |  printf("MANY WORDS\
+      |  ^~~~~~
+bin.c:2:2: warning: incompatible implicit declaration of built-in function ‘printf’
+bin.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int foo_2(void){
+$ ls -l
+итого 40
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ gcc hello.o -o hel
+/usr/bin/ld: hello.o: в функции «main»:
+hello.c:(.text+0xe): неопределённая ссылка на «foo_2»
+collect2: error: ld returned 1 exit status
+$ gcc hello.o bin.o -o hello_from_o
+$ ls -l
+итого 60
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rwxrwxr-x 1 ivan ivan 16800 окт 23 14:50 hello_from_o
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ ./hello_from_o
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ gcc hello.c bin.o -o hello_from_o
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo_2’ [-Wimplicit-function-declaration]
+    3 |  foo_2();
+      |  ^~~~~
+$ ls -l
+итого 60
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rwxrwxr-x 1 ivan ivan 16800 окт 23 14:52 hello_from_o
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ ./hello_from_o
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ man strip
+$ strip hello_from_o 
+$ ls -l
+итого 56
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rwxrwxr-x 1 ivan ivan 14472 окт 23 14:54 hello_from_o
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ ./hello_from_o 
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ gcc –m64 –s –O2 hello.c bin.c -o a.app –lrt
+gcc: error: –m64: Нет такого файла или каталога
+gcc: error: –s: Нет такого файла или каталога
+gcc: error: –O2: Нет такого файла или каталога
+gcc: error: –lrt: Нет такого файла или каталога
+$ gcc -m64 -s -O2 hello.c bin.c -o a.app -lrt
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo_2’ [-Wimplicit-function-declaration]
+    3 |  foo_2();
+      |  ^~~~~
+bin.c: In function ‘foo_2’:
+bin.c:2:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    2 |  printf("MANY WORDS\
+      |  ^~~~~~
+bin.c:2:2: warning: incompatible implicit declaration of built-in function ‘printf’
+bin.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int foo_2(void){
+$ ls -l
+итого 72
+-rwxrwxr-x 1 ivan ivan 14472 окт 23 14:57 a.app
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rwxrwxr-x 1 ivan ivan 14472 окт 23 14:54 hello_from_o
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ ./a.app 
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ gcc -m64 -s -O2 -mieee-fp -march=corei7 -I. -L. bin.c hello.c -o a.app -lrt
+bin.c: In function ‘foo_2’:
+bin.c:2:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    2 |  printf("MANY WORDS\
+      |  ^~~~~~
+bin.c:2:2: warning: incompatible implicit declaration of built-in function ‘printf’
+bin.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int foo_2(void){
+hello.c: In function ‘main’:
+hello.c:3:2: warning: implicit declaration of function ‘foo_2’ [-Wimplicit-function-declaration]
+    3 |  foo_2();
+      |  ^~~~~
+$ ls -l
+итого 72
+-rwxrwxr-x 1 ivan ivan 14472 окт 23 15:01 a.app
+-rw-rw-r-- 1 ivan ivan   294 окт 23 14:39 bin.c
+-rw-rw-r-- 1 ivan ivan  1904 окт 23 14:50 bin.o
+-rw-rw-r-- 1 ivan ivan    67 окт 23 14:31 foo.c
+-rwxrwxr-x 1 ivan ivan 16856 окт 23 14:44 hello
+-rw-rw-r-- 1 ivan ivan    86 окт 23 14:39 hello.c
+-rwxrwxr-x 1 ivan ivan 14472 окт 23 14:54 hello_from_o
+-rw-rw-r-- 1 ivan ivan  1744 окт 23 14:48 hello.o
+$ ./a.app 
+MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS	MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDS		MANY WORDSHello World! 
+$ 

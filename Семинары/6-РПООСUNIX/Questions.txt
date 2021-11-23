@@ -1,0 +1,4 @@
+Слайд 16:
+	int pthread_condattr_getpshared( const pthread_condattr_t *attr, int *pshared);
+	int pthread_condattr_setpshared(pthread_condattr_t *attr, int pshared);
+

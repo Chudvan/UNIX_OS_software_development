@@ -1,0 +1,41 @@
+Русские хиты 90х - https://ruv.hotmo.org/collection/135
+ftok - https://www.opennet.ru/man.shtml?topic=ftok&category=3&russian=0
+msgget - https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=msgget&category=2
+ENOSPC - https://stackoverflow.com/questions/22475849/node-js-what-is-enospc-error-and-how-to-solve
+Обмен данными между приложениями с помощью механизма из IPC UNIX System V - https://www.ibm.com/developerworks/ru/library/au-ipc/index.html#listing2
+Права доступа Unix, SUID, SGID, Sticky биты - https://help.ubuntu.ru/wiki/%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%B0_unix
+Язык Си в примерах/ASCII-коды символовЯзык Си в примерах/ASCII-коды символов - https://ru.wikibooks.org/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_%D0%A1%D0%B8_%D0%B2_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D1%85/ASCII-%D0%BA%D0%BE%D0%B4%D1%8B_%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2#/media/%D0%A4%D0%B0%D0%B9%D0%BB:Ascii_Table-nocolor.svg
+memset - http://cppstudio.com/post/673/
+strcpy - http://cppstudio.com/post/686/
+open - https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=open&category=2
+Что такое extern "C" - https://alex-siew.livejournal.com/2489.html
+---
+strerror(errno)
+---
+https://www.ibm.com/developerworks/ru/library/au-ipc/index.html#listing2
+http://cppstudio.com/post/673/
+http://cppstudio.com/post/686/
+https://www.opennet.ru/man.shtml?topic=ipcs&category=8&russian=0
+https://stackoverflow.com/questions/1553799/how-to-solve-msgget-no-space-left-on-device-error
+https://ravesli.com/urok-57-vvedenie-v-std-string/#toc-2
+По умолчанию потоковый ввод cin вводит строку до пробела, символа табуляции или перевода строки. - https://prog-cpp.ru/cpp-std/
+$@ - имя цели - https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
+make all - https://ru.wikipedia.org/wiki/Make
+---
+https://www.ibm.com/developerworks/ru/library/au-ipc/index.html#listing2
+http://cppstudio.com/post/673/
+http://cppstudio.com/post/686/
+https://www.opennet.ru/man.shtml?topic=ipcs&category=8&russian=0
+https://stackoverflow.com/questions/1553799/how-to-solve-msgget-no-space-left-on-device-error
+https://ravesli.com/urok-57-vvedenie-v-std-string/#toc-2
+https://www.cplusplus.com/reference/string/string/begin/
+https://www.cplusplus.com/reference/string/string/string/
+https://ru.wikipedia.org/wiki/Make
+https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c
+https://alex-siew.livejournal.com/2489.html
+https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
+http://cppstudio.com/post/669/
+---
+https://www.cplusplus.com/reference/string/string/c_str/
+https://ravesli.com/urok-57-vvedenie-v-std-string/#toc-2
+

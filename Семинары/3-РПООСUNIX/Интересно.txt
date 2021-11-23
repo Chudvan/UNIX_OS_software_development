@@ -1,0 +1,2 @@
+dup2( STDOUT_FILENO, STDERR_FILENO ); - проэкспериментировать
+

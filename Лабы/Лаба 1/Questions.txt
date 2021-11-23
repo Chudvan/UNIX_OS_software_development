@@ -1,0 +1,5 @@
+В C переменное число параметров в функции обозначаются ... - http://www.c-cpp.ru/content/vastart-vaend-vaarg
+---
+Почему он в va_start передаёт len, а не spec ?
+getopt
+

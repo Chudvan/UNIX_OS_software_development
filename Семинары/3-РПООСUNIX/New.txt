@@ -1,0 +1,18 @@
+fflush - функция, которая очищает буфер (полезно, чтобы реализовать вывод на экран в реальном времени)
+fseek аргумент whence допустимые значения - слайд 5
+STDIN == 0
+STDOUT == 1
+umask - задаёт маску для базовых прав доступа - https://handynotes.ru/2010/02/umask.html
+inode == индексный дескриптор - https://andreyex.ru/operacionnaya-sistema-linux/vse-chto-vam-nuzhno-znat-ob-inode-v-linux/
+Слайд 18 - 
+	DIR *fdopendir( int fd ); - преобразование inod'а на папку в DIR* на папку
+	readdir - https://www.opennet.ru/man.shtml?topic=readdir&category=2&russian=0
+	closedir, opendir, readdir, rewinddir - http://www.c-cpp.ru/content/closedir-opendir-readdir-rewinddir
+Слайд 19 - 
+	readv, writev - удобно использовать, когда нужно записать поток данных по разным областям памяти (массив буферов - вектор), а не в одном месте - https://www.opennet.ru/man.shtml?topic=readv&category=2&russian=0
+Слайд 20 - 
+	sync - записывает буфер кэша на диск - https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=sync&category=2
+	fsync - синхронизирует состояние файла в памяти с состоянием на диске - https://www.opennet.ru/man.shtml?topic=fsync&category=2&russian=0
+	realpath - возвращает приведенное к обычному виду полное имя файла - https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=realpath
+	ftw - команда перемещения по дереву каталогов - https://www.opennet.ru/man.shtml?topic=ftw&category=3&russian=0
+

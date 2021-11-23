@@ -1,0 +1,19 @@
+Слайды 1-15: распарсить (~= до 00:47:00)
+Слайд 9:
+	int pthread_setspecific - https://linux.die.net/man/3/pthread_setspecific
+		как данные привзяываются к конкретному потоку? (10 вопрос у Ильи)
+Слайд 15:
+	int mutex_init - http://www.opennet.ru/man.shtml?category=3&russian=4&topic=mutex_init
+		кто может менять значения мьютекса? (4 вопрос Борзенкова - скорее всего, у него ошибка, ответ - только поток, который сделал последние изменения)
+Слайд 16:
+	pthread_condattr_init
+	pthread_condattr_destroy
+	pthread_condattr_getpshared
+	pthread_condattr_setpshared
+	PTHREAD_PROCESS_PRIVATE
+	PTHREAD_PROCESS_SHARED
+Слайд 17:
+	pthread_condattr_getclock
+	pthread_condattr_setclock
+Слайды 20-end: распарсить (~= после 00:57:00)
+

@@ -1,0 +1,9 @@
+Дочерние и родительские процессы + export - http://rus-linux.net/MyLDP/consol/export.html
+Статические и динамические библиотеки C + gcc + make - https://www.opennet.ru/docs/RUS/zlp/003.html
+Тонкости make:
+	https://www.osp.ru/os/1993/03/178469
+	http://pushorigin.ru/bash/make
+	https://ru.wikipedia.org/wiki/Make
+	Условные части make-файла:
+		https://www.opennet.ru/docs/RUS/make_compile/make-7.html
+		https://www.opennet.ru/man.shtml?topic=make&category=1&russian=5

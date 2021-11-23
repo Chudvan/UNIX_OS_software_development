@@ -1,0 +1,2 @@
+Динамическая загрузка и выгрузка (явная компоновка) - https://www.opennet.ru/man.shtml?topic=dlopen&category=3
+

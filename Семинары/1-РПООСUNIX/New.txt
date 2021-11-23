@@ -1,0 +1,51 @@
+libstdc++ - https://gcc.gnu.org/onlinedocs/libstdc++/faq.html#faq.what
+ABI - https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9
+Таблица символов - https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0_%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2
+Статические и динамические библиотеки - https://ravesli.com/staticheskie-i-dinamicheskie-biblioteki/
+	Статические библиотеки
+		.lib, .a
+	Динамическая библиотека == разделяемая == shared library
+		.dll, .so
+	Библиотека импорта, import library
+ОС, работающие на архитектуре SPARC - https://ru.wikipedia.org/wiki/SPARC#%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B,_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%89%D0%B8%D0%B5_%D0%BD%D0%B0_SPARC
+ARM архитектура - https://ru.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)
+librt.so - https://stackoverflow.com/questions/56128570/what-is-librt-so-how-can-i-use-it-directly
+Компиляция с помощью gcc и g++ - не одно и то же!
+.h.gch (предкомпилированный заголовок) - https://stackoverflow.com/questions/1241399/what-is-a-h-gch-file
+Таблица индексов (см. ar s/ranlib) - https://www.opennet.ru/man.shtml?topic=ar&category=1
+ranlib (оглавление библиотеки) - http://www.linuxlib.ru/manpages/RANLIB.1.shtml
+__SYMDEF файл с оглавлением - http://www.linuxlib.ru/manpages/RANLIB.1.shtml
+ar архивирование + статические библиотеки:
+	https://www.opennet.ru/man.shtml?topic=ar&category=1
+	https://losst.ru/arhivatsiya-v-linux#Ar
+export - http://rus-linux.net/MyLDP/consol/export.html
+Макрос - https://ru.wikipedia.org/w/index.php?title=%D0%9C%D0%B0%D0%BA%D1%80%D0%BE%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0&stable=1#%D0%9C%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B_%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8
+LD_LIBRARY_PATH, -Wl,-rpath - https://wm-help.net/lib/b/book/1268775764/65
+__declspec(dllexport) - функция из dll экспортируемая - http://citforum.ru/book/cook/dll0.shtml
+Неявная и явная загрузка разделяемой библиотеки - http://citforum.ru/book/cook/dll0.shtml
+Лекция 1 слайды 16-17 - Управление доступом и отслеживание изменений в файлах SCCS - http://www.regatta.cs.msu.ru/doc/usr/share/man/info/ru_RU/a_doc_lib/aixprggd/genprogc/contol_trk_sccs_chgs.htm
+Права доступа в цифрах: chmod (777, 755, 655, 444, 400) - https://goldbusinessnet.com/dvizhok-wordpress/chmod-prava-dostupa-k-fajlam/
+Лекция 1 слайды 18-20 - get - извлечение версии из SCCS-файла - Идентифицирующие ключевые слова - https://hpc.icc.ru/documentation/manpages/GET.1.html
+Лекция 1 слайд 21 - prs - https://hpc.icc.ru/documentation/manpages/PRS.1.html
+Лекция 1 слайд 22 - delta - https://hpc.icc.ru/documentation/manpages/DELTA.1.html
+Лекция 1 слайд 24 - http://pushorigin.ru/bash/make#%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%86%D0%B5%D0%BB%D0%B8
+Лекция 1 слайд 26 - make встроенные макросы:
+	Yacc - стандартным генератором синтаксических анализаторов (парсеров) в Unix-системах (компилятор компиляторов) - https://yandex.ru/search/?clid=2186621&text=YACC&lr=213&redircnt=1605100990.1
+	LEX - Генератор программ лексического анализа - http://lib.ru/MAN/DEMOS210/lex.txt
+	LFLAGS, LDFLAGS, GFLAGS - https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html
+Лекция 1 слайд 27 - Символические макроподстановки:
+	$@, $<, $?, $^ - http://pushorigin.ru/bash/make#%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5
+Лекция 1 слайд 28 - rm -f - игнорировать несуществующие файлы
+Лекция 1 слайд 29 - Стандартные цели make:
+	all — выполнить сборку пакета - https://ru.wikipedia.org/wiki/Make#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5
+	clean — очистить дистрибутив
+rm –f *.o - удалить все файлы, имеющие суффикс .o
+Лекция 1 слайд 30 - \ - для выполнения всех команд в одном шеле (по дефолту, каждая - в своей копии)
+MSVC == Microsoft Visual C++ - https://ru.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B
+nmake это сборщик компилятора msvc - http://www.prog.org.ru/topic_17897_0.html
+Лекция 1 слайд 30 - Условные части make-файла:
+	https://www.opennet.ru/docs/RUS/make_compile/make-7.html
+	https://www.opennet.ru/man.shtml?topic=make&category=1&russian=5
+Лекция 1 слайд 31 - .PHONY - группировка завимостей - http://pushorigin.ru/bash/make#phony-targets
+Лекция 1 слайд 31 - ar cr - https://losst.ru/arhivatsiya-v-linux#Ar
+

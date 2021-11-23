@@ -1,0 +1,6 @@
+timer_settime - http://ru.manpages.org/timer_settime/2
+sigevent - http://ru.manpages.org/sigevent/7
+shmat - https://www.opennet.ru/man.shtml?topic=shmat&category=2&russian=0
+shmget - https://www.opennet.ru/man.shtml?topic=shmget&category=2&russian=0
+shmctl - https://www.opennet.ru/man.shtml?topic=shmctl&category=2&russian=0
+getrlimit - https://www.opennet.ru/man.shtml?topic=getrlimit&category=2&russian=0

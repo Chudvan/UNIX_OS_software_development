@@ -1,0 +1,17 @@
+Системное программирование на с++ для Unix - Чан Т. - http://computersbooks.net/index.php?id1=4&category=teoriyaprogramirovaniya&author=chan-t&book=1999&page=201
+
+thr_self - https://docs.oracle.com/cd/E19253-01/816-5168/6mbb3hs0l/index.html
+Неустранимая ошибка: iostream: нет такого файла или каталога при компиляции программы C с использованием GCC - https://web-answers.ru/c/neustranimaja-oshibka-iostream-net-takogo-fajla.html
+Неопределенная ссылка на pthread_create в Linux - https://answer-id.com/ru/51155818
+pthread_create - https://man7.org/linux/man-pages/man3/pthread_create.3.html
+thr_exit - https://docs.oracle.com/cd/E19683-01/817-3944/6mjgl03pb/index.html
+th_yield - https://docs.oracle.com/cd/E19683-01/817-3944/6mjgl03pr/index.html
+thr_join - https://docs.oracle.com/cd/E19455-01/806-0630/6j9vkb8kp/index.html
+std::istream::getline - http://www.cplusplus.com/reference/istream/istream/getline/
+Цикл do while в C++ - http://cppstudio.com/post/361/
+pthread_cond_signal - https://linux.die.net/man/3/pthread_cond_signal
+strlen - http://cppstudio.com/post/664/
+Не могу понять в чем проблема Makefile? - https://qna.habr.com/q/551386
+---
+g++ pipe.cpp -o pipe -lpthread
+

@@ -1,0 +1,4 @@
+1.3. Автоматизация процесса с помощью GNU-утилиты make - https://wm-help.net/lib/b/book/1268775764/21
+Инструментарий программиста в Linux: MAKE - http://parallel.imm.uran.ru/freesoft/make/make.html
+Просто о make - https://habr.com/ru/post/211751/
+

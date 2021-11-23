@@ -1,0 +1,17 @@
+1) Процесс компиляции программ на C++ - https://habr.com/ru/post/478124/
+2) gcc -D - https://www.rapidtables.com/code/linux/gcc/gcc-d.html
+
+gcc -DDEBUG myfile.c -o myfile
+./myfile 
+
+3) gcc -Wall - https://www.rapidtables.com/code/linux/gcc/gcc-wall.html
+4) Warning options - https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
+5) gcc -g - https://www.rapidtables.com/code/linux/gcc/gcc-g.html
+6) gcc -O - https://www.rapidtables.com/code/linux/gcc/gcc-o.html#optimization
+7) Лекция 1 слайд 10 (практика gcc): см. /Compile/Ktitrov/log.txt
+8) Опции gcc:
+	https://www.rapidtables.com/code/linux/gcc.html#options
+	https://www.opennet.ru/docs/RUS/gcc/gcc1-2.html
+9) Warnings - https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
+10) gcc -fPIC - man + Лекция 1 слайд 13
+

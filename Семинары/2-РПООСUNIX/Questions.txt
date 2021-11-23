@@ -1,0 +1,25 @@
+8 стр презентации - Получить сообщение об ошибке в памяти:
+10 - если #define, то отключается assert?
+11
+	double runtime = (double)( end – start ) / (double)
+	CLOCKS_PER_SEC;
+	переполнение +-
+	int clock_getcpuclockid(pid_t pid, clockid_t *clock_id);
+13 стр
+	последний аргумент в getopt? что за :? как работать с -опциями?
+	longopt - массив структур или как это?
+	за что отвечают extern char *optarg; extern int opterr, optind, optopt;
+16
+	int rand_r(unsigned *seed); vs rand
+	drand48(void); vs rand
+	unsigned short *seed48(unsigned short seed16v[3]);
+	Формула генератора - для rand или для всех?
+17
+	va_list
+	void va_start(va_list ap, argN); - не понял суть даже следующих 4-х функций
+	void va_copy(va_list dest, va_list src);
+	type va_arg(va_list ap, type);
+	void va_end(va_list ap);
+	Приоритет операций: (char*) или +=? что за [-1] ? Последний элемент??? в C так можно разве?
+	Применение: ???
+

@@ -1,0 +1,23 @@
+Блокировка через переменную состояния. - https://www.opennet.ru/docs/RUS/ipcbook/node75.html
+semget - https://www.opennet.ru/man.shtml?topic=semget&category=2&russian=0
+mutex_init - http://www.opennet.ru/man.shtml?category=3&russian=4&topic=mutex_init
+pthread_setspecific - https://linux.die.net/man/3/pthread_setspecific
+RPC - УДАЛЕННЫЙ ВЫЗОВ ПРОЦЕДУР - двери - http://www.redov.ru/kompyutery_i_internet/unix_vzaimodeistvie_processov/p6.php#metkadoc2
+cond_wait - https://docs.oracle.com/cd/E19455-01/806-0630/6j9vkb8cu/index.html
+accept - https://www.opennet.ru/docs/RUS/linux_base/node248.html
+sem_open - http://ru.manpages.org/sem_open/3
+Объекты синхронизации:
+	Event (событие)
+	Mutex (Mutually Exclusive)
+	Semaphore (семафор)
+	Waitable timer (таймер ожидания)
+bind - https://www.opennet.ru/docs/RUS/linux_base/node246.html
+pthread_cond_signal - https://linux.die.net/man/3/pthread_cond_signal
+pthread_cond_broadcast - https://linux.die.net/man/3/pthread_cond_broadcast
+Условные переменные Sun Microsystems - http://www.igce.comcor.ru/Dev_bach/multithread.html
+Гарантировано ли, что pthread_cond_signal пробудит ожидающий поток? - https://fooobar.com/questions/486727/is-it-guaranteed-that-pthreadcondsignal-will-wake-up-a-waiting-thread
+cond_broadcast - https://linux.die.net/man/3/pthread_cond_broadcast
+сокеты AF_INET - https://stackoverflow.com/questions/1593946/what-is-af-inet-and-why-do-i-need-it
+connect - https://www.opennet.ru/docs/RUS/linux_base/node249.html
+listen - https://www.opennet.ru/docs/RUS/linux_base/node247.html
+

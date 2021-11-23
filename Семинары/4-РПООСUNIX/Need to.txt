@@ -1,0 +1,30 @@
+Слайд 8 - протестить
+Слайд 9 - протестить
+---
+wait - https://www.opennet.ru/man.shtml?topic=wait&category=2&russian=0
+getpid - https://www.opennet.ru/docs/RUS/zlp/006.html#2
+Ресурсы процесса - https://www.opennet.ru/man.shtml?topic=getrlimit&category=2&russian=0
+kill - https://www.opennet.ru/man.shtml?topic=kill&category=2
+int raise(int signal) - http://www.c-cpp.ru/content/raise
+Стандартные сигналы - https://learnc.info/c/signals.html
+signal - http://cppstudio.com/post/1204/
+Управление сигналами - http://ru.manpages.org/sighold/3
+Сигналы реального времени - http://dmilvdv.narod.ru/Translate/ELSDD/elsdd_real-time_signals.html
+sigaction, siginfo_t - https://www.opennet.ru/man.shtml?topic=sigaction&category=2&russian=0
+alarm - http://ccfit.nsu.ru/~deviv/courses/unix/unix/ng9cfd8.html
+nanosleep - https://www.opennet.ru/man.shtml?topic=nanosleep&category=2&russian=0
+getitimer, setitimer - https://www.opennet.ru/man.shtml?topic=setitimer&category=2&russian=0
+timer_create - http://ru.manpages.org/timer_create/2
+timer_gettime - http://ru.manpages.org/timer_gettime/2
+clock_getres - http://ru.manpages.org/clock_nanosleep/2
+Асинхронный ввод-вывод - https://ru.wikipedia.org/wiki/%D0%90%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B2%D0%BE%D0%B4-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4
+	aiocb - http://dmilvdv.narod.ru/Translate/ELSDD/elsdd_asynchronous_i_o.html
+	sigevent - http://ru.manpages.org/sigevent/7
+RT vs TS
+	Процессы и их приоритеты в ОС Unix + Классы процессов и внутренние приоритеты. - https://www.osp.ru/os/1997/06/179302
+	https://techdifferences.com/difference-between-time-sharing-and-real-time-operating-system.html
+Задание класса и параметров процесса, PC_SETXPARMS - https://www.opennet.ru/man.shtml?topic=priocntl&category=2&russian=4
+Управление страницами памяти - https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=memcntl&category=2
+---
+Слайды 36-37 - разобрать + протестить
+
